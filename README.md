@@ -1,45 +1,24 @@
-# Example Project Documentation Guideline
+# Hangman
 
-> Include here a brief description of the project, what technologies are used etc.
+> Hangman is a classic word guessing game in which a player thinks of a word, and the other player tries to guess that word within a certain number of attempts. This repository contains an implementation of the Hangman game where the computer thinks of a word, and the user tries to guess it.
 
-## Milestone 1
-
-- Answer some of these questions in the next few bullet points. What have you built? What technologies have you used? Why have you used those?
-
-- Example: The FastAPI framework allows for fast and easy construction of APIs and is combined with pydantic, which is used to assert the data types of all incoming data to allow for easier processing later on. The server is ran locally using uvicorn, a library for ASGI server implementation.
-  
-```python
-"""Insert your code here"""
-```
-
-> Insert an image/screenshot of what you have built so far here.
+This repo is divided into multiple project milestones in the form of Python files, each building upon the previous one. The only library imported is 'random', a built-in Python library used to generate random numbers.
 
 ## Milestone 2
 
-- Does what you have built in this milestone connect to the previous one? If so explain how. What technologies are used? Why have you used them? Have you run any commands in the terminal? If so insert them using backticks (To get syntax highlighting for code snippets add the language after the first backticks).
+The computer randomly selects a word from a predefined list. You can run the script, and the selected word will be displayed.
 
-- Example below:
+## Milestone 3
 
-```bash
-/bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181
-```
+Implements the basic functionality of the game. It imports code from milestone2.py and asks the user to input a letter to guess. If the input is a valid letter, it checks whether the letter is in the selected word.
 
-- The above command is used to check whether the topic has been created successfully, once confirmed the API script is edited to send data to the created kafka topic. The docker container has an attached volume which allows editing of files to persist on the container. The result of this is below:
+## Milestone 4
 
-```python
-"""Insert your code here"""
-```
+Introduces a class-based approach for better organization. The Hangman class manages the game logic, including word selection, guessing, and tracking remaining lives. It prevents repeated guesses and provides feedback based on the guessed letters.
 
-> Insert screenshot of what you have built working.
+## Milestone 5
 
-## Milestone n
+Refactors the Hangman class and adds a play_game function that takes a list of words. It allows you to play the Hangman game with multiple words. The game continues until the player wins by guessing the word or runs out of lives.
 
-- Continue this process for every milestone, making sure to display clear understanding of each task and the concepts behind them as well as understanding of the technologies used.
-
-- Also don't forget to include code snippets and screenshots of the system you are building, it gives proof as well as it being an easy way to evidence your experience!
-
-## Conclusions
-
-- Maybe write a conclusion to the project, what you understood about it and also how you would improve it or take it further.
-
-- Read through your documentation, do you understand everything you've written? Is everything clear and cohesive?
+## Dependencies
+This Hangman game implementation is built using Python. No additional libraries or packages are required.
